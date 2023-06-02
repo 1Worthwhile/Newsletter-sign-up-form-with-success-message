@@ -1,0 +1,302 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
+  list-style: none;
+  border: none;
+  outline: none;
+  font-weight: 400;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: var(--Charcoal-Grey);
+}
+.attribution {
+  font-size: 15px;
+  text-align: center;
+  background: var(--White);
+  padding: 10px 0;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+:root {
+  --Tomato: hsl(4, 100%, 67%);
+  --Dark-Slate-Grey: hsl(234, 29%, 20%);
+  --Charcoal-Grey: hsl(235, 18%, 26%);
+  --Grey: hsl(231, 7%, 60%);
+  --White: hsl(0, 0%, 100%);
+}
+.remove {
+  display: none !important;
+}
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+  position: relative;
+}
+
+.form {
+  width: 900px;
+  background: var(--White);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 20px;
+  box-shadow: 0 0 30px var(--Dark-Slate-Grey);
+}
+.txt {
+  width: 55%;
+  padding: 0 50px;
+}
+.txt h3 {
+  font-size: 55px;
+  color: var(--Dark-Slate-Grey);
+  padding-bottom: 20px;
+  font-weight: 700;
+}
+.txt p {
+  font-size: 16px;
+  color: var(--Dark-Slate-Grey);
+  padding-bottom: 25px;
+}
+.txt ul {
+  margin-bottom: 30px;
+}
+
+.txt ul li {
+  display: flex;
+  align-items: unset;
+  justify-content: unset;
+  gap: 15px;
+  font-size: 16px;
+  color: var(--Dark-Slate-Grey);
+  padding-bottom: 10px;
+}
+.input_box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.input_box label {
+  font-size: 15px;
+  color: var(--Dark-Slate-Grey);
+  font-weight: 700;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.input_box label span {
+  font-size: 12px;
+  color: var(--Tomato);
+  font-weight: 700;
+  display: none;
+}
+.input_box.err label span {
+  display: block;
+}
+.input_box input {
+  width: 100%;
+  border: 1px solid var(--Grey);
+  padding: 15px;
+  font-size: 15px;
+  border-radius: 5px;
+  caret-color: var(--Grey);
+}
+.input_box.err input {
+  border-color: var(--Tomato);
+  color: var(--Tomato);
+  background: hsla(4, 100%, 67%, 0.1);
+}
+.subscribe_btn {
+  width: 100%;
+}
+.subscribe_btn button {
+  width: 100%;
+  font-size: 13px;
+  padding: 17px 0;
+  border-radius: 5px;
+  color: var(--White);
+  background: var(--Dark-Slate-Grey);
+  font-weight: 700;
+  transition: 400ms ease-in-out;
+  cursor: pointer;
+}
+.subscribe_btn button:hover {
+  background: linear-gradient(
+    to right,
+    rgb(252, 109, 133),
+    rgb(252, 109, 133),
+    hsl(4, 100%, 67%),
+    hsl(4, 100%, 67%),
+    rgb(247, 119, 7)
+  );
+  box-shadow: 0 6px 10px hsla(4, 100%, 67%, 0.6);
+}
+.img {
+  width: 45%;
+  overflow: hidden;
+}
+
+.img img {
+  width: 100%;
+  height: 100%;
+}
+
+.thanks {
+  width: 380px;
+  background: var(--White);
+  border-radius: 20px;
+  box-shadow: 0 0 20px var(--Dark-Slate-Grey);
+  padding: 40px;
+  position: absolute;
+  transform: translateY(-150%);
+  transition: transform 0.5s;
+}
+.thanks.active {
+  transform: translateY(0);
+}
+.thanks .img {
+  width: 50px;
+  margin-bottom: 30px;
+}
+.thanks h2 {
+  font-weight: 700;
+  color: var(--Dark-Slate-Grey);
+  font-size: 40px;
+  line-height: 40px;
+  padding-bottom: 20px;
+}
+.thanks p {
+  font-size: 16px;
+  color: var(--Charcoal-Grey);
+  padding-bottom: 30px;
+  font-weight: 500;
+}
+.thanks p a {
+  text-decoration: none;
+  color: var(--Dark-Slate-Grey);
+  font-weight: 700;
+}
+.thanks button {
+  width: 100%;
+  padding: 15px;
+  border-radius: 5px;
+  font-weight: 700;
+  color: var(--White);
+  font-size: 15px;
+  background: var(--Dark-Slate-Grey);
+  transition: 400ms ease-in-out;
+  cursor: pointer;
+}
+.thanks button:hover {
+  background: linear-gradient(
+    to right,
+    rgb(252, 109, 133),
+    rgb(252, 109, 133),
+    hsl(4, 100%, 67%),
+    hsl(4, 100%, 67%),
+    rgb(247, 119, 7)
+  );
+  box-shadow: 0 6px 10px hsla(4, 100%, 67%, 0.6);
+}
+@media (max-width: 800px) {
+  .wrapper {
+    padding: 30px 20px;
+  }
+  .txt {
+    padding: 0 30px;
+  }
+  .txt h3 {
+    font-size: 45px;
+  }
+  .txt p {
+    font-size: 15px;
+  }
+  .txt ul li {
+    font-size: 15px;
+  }
+  .txt ul li img {
+    width: 17px;
+  }
+}
+
+@media (max-width: 700px) {
+  .wrapper {
+    padding: 0;
+    height: 100%;
+    min-height: 100vh;
+  }
+  .form {
+    flex-direction: column-reverse;
+    width: 100%;
+    border-radius: 0;
+    padding: 0 0 40px 0;
+    box-shadow: none;
+    gap: 30px;
+  }
+  .form .img {
+    width: 100%;
+    height: 50vh;
+    background-image: url("assets/images/illustration-sign-up-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 0 0 20px 20px;
+  }
+  .form .img img {
+    display: none;
+  }
+  .txt {
+    padding: 0 40px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 450px) {
+  .txt {
+    padding: 0 20px;
+  }
+  .txt h3 {
+    font-size: 40px;
+  }
+  .thanks {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    border-radius: 0;
+    padding: 100px 20px 0 20px;
+  }
+  .thanks .img {
+    width: 50px;
+  }
+  .thanks h2 {
+    font-size: 30px;
+  }
+  .thanks button {
+    margin-top: 80px;
+    position: fixed;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+  }
+}
